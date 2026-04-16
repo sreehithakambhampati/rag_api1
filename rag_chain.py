@@ -34,6 +34,9 @@ Question: {query}
     answer = response.text
 
     # Gemini doesn't always return tokens directly
-    # tokens = getattr(response, "usage_metadata", {}).get("total_token_count", "N/A")
+    usage = response.usage_metadata if hasattr(response, "usage_metadata") else None
 
-    return answer, elapsed
+    tokens = usage.total_token_count if usage else "N/A"
+    print(tokens)
+
+    return answer, elapsed, tokens

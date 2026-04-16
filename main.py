@@ -28,8 +28,8 @@ def ask(request: QueryRequest):
     logger.info(f"Retrieval time: {retrieval_time:.3f}s")
 
     # Step 2: Generation
-    answer, llm_time = generate_answer(query, chunks)
-    logger.info(f"LLM time: {llm_time:.3f}s")
+    answer, llm_time, tokens = generate_answer(query, chunks)
+    logger.info(f"LLM time: {llm_time:.3f}s | Tokens: {tokens}")
 
     return {
         "query": query,
@@ -38,6 +38,6 @@ def ask(request: QueryRequest):
         "logs": {
             "retrieval_time_sec": round(retrieval_time, 3),
             "llm_time_sec": round(llm_time, 3),
-            # "tokens_used": tokens
+            "tokens_used": tokens
         }
     }
