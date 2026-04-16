@@ -1,0 +1,47 @@
+Artificial Intelligence is transforming the world by enabling machines to perform tasks that usually require human intelligence. It includes reasoning, decision making, perception, and language understanding. AI systems are widely used in healthcare, finance, transportation, and education.
+
+Machine Learning is a subset of Artificial Intelligence that focuses on learning from data. Instead of being explicitly programmed, ML models improve their performance over time as they are exposed to more data. It includes supervised learning, unsupervised learning, and reinforcement learning techniques.
+
+Supervised learning uses labeled datasets where input and output are already known. It is commonly used for classification and regression problems such as spam detection, house price prediction, and image classification.
+
+Unsupervised learning deals with unlabeled data. The system tries to find hidden patterns or structures in data. Clustering algorithms like K-means are widely used in unsupervised learning.
+
+Reinforcement learning is based on reward and punishment. An agent interacts with an environment and learns the best actions to maximize rewards. It is widely used in robotics, gaming, and autonomous systems.
+
+Deep Learning is a subset of Machine Learning that uses neural networks with many layers. These networks are inspired by the human brain and are capable of learning complex patterns in large datasets such as images, audio, and text.
+
+Neural networks consist of layers of interconnected nodes called neurons. Each connection has weights that are adjusted during training using backpropagation.
+
+Large Language Models are advanced AI systems trained on massive text datasets. They can understand context, generate human-like text, and perform tasks such as summarization, translation, and question answering.
+
+Examples of large language models include GPT, Gemini, and Claude. These models are trained using transformer architecture which helps them understand relationships between words in long sentences.
+
+Retrieval Augmented Generation is a technique that improves LLM responses by combining them with external knowledge sources. Instead of relying only on internal training data, the model retrieves relevant documents before generating answers.
+
+RAG systems typically have three steps: embedding generation, vector storage, and retrieval. This helps reduce hallucinations and improves factual accuracy in responses.
+
+FAISS is a library developed by Facebook AI for efficient similarity search. It allows fast retrieval of nearest neighbor vectors in high dimensional space. It is commonly used in AI search engines and recommendation systems.
+
+Embeddings are numerical representations of text where similar meanings have similar vector representations. They are generated using models like SentenceTransformers or OpenAI embedding models.
+
+Vector databases store embeddings and allow efficient similarity search. Popular vector databases include Pinecone, Weaviate, and ChromaDB.
+
+FastAPI is a modern Python web framework used to build APIs quickly. It supports asynchronous programming, automatic documentation, and is widely used in machine learning backend systems.
+
+APIs are interfaces that allow different software systems to communicate with each other. REST APIs use HTTP methods like GET, POST, PUT, and DELETE.
+
+A chatbot is a software application designed to simulate human conversation. Modern chatbots use large language models to understand user input and generate intelligent responses.
+
+Natural Language Processing is a field of AI that focuses on enabling computers to understand human language. It includes tasks like tokenization, sentiment analysis, named entity recognition, and language translation.
+
+Tokenization is the process of breaking text into smaller units called tokens. These tokens can be words, subwords, or characters depending on the model.
+
+Transformers are a type of neural network architecture that revolutionized NLP. They use attention mechanisms to understand relationships between words in a sentence.
+
+Attention mechanisms help models focus on relevant parts of input text while processing information. This improves performance in translation and text generation tasks.
+
+Cloud computing allows on-demand access to computing resources over the internet. It is widely used for deploying AI models and scalable applications.
+
+Docker is a tool used to package applications into containers. It ensures that software runs consistently across different environments.
+
+Kubernetes is a container orchestration system used to manage large-scale deployments of applications in the cloud.
