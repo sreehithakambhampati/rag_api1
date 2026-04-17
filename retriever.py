@@ -3,8 +3,9 @@ import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-# Load model
-model = SentenceTransformer("all-MiniLM-L6-v2")
+
+model = SentenceTransformer("all-MiniLM-L6-v2") 
+
 
 
 
@@ -67,3 +68,4 @@ def retrieve(query: str, top_k: int = 5):
     elapsed = time.time() - start
 
     return results, elapsed
+

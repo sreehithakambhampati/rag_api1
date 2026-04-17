@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from retriever import retrieve
 from rag_chain import generate_answer
 from logger import logger
+from reranker import rerank
 
 print("THIS IS MY MAIN FILE")
 
@@ -27,16 +28,23 @@ def ask(request: QueryRequest):
     chunks, retrieval_time = retrieve(query, top_k=5)
     logger.info(f"Retrieval time: {retrieval_time:.3f}s")
 
-    # Step 2: Generation
-    answer, llm_time, tokens = generate_answer(query, chunks)
+     # Step 2: Re-ranking
+    reranked_chunks, rerank_time = rerank(query, chunks, 0.5)
+    logger.info(f"Re-rank time: {rerank_time:.3f}s") 
+
+
+    # Step 3: Generation
+    answer, llm_time, tokens = generate_answer(query,  reranked_chunks)
     logger.info(f"LLM time: {llm_time:.3f}s | Tokens: {tokens}")
 
     return {
         "query": query,
         "answer": answer,
         "retrieved_chunks": chunks,
+        "reranked_chunks": reranked_chunks,
         "logs": {
             "retrieval_time_sec": round(retrieval_time, 3),
+            "rerank_time_sec": round(rerank_time, 3),
             "llm_time_sec": round(llm_time, 3),
             "tokens_used": tokens
         }
